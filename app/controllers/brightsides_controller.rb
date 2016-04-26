@@ -1,10 +1,11 @@
 class BrightsidesController < ApplicationController
   before_action :set_brightside, only: [:show, :edit, :update, :destroy]
+  before_action :signed_in_user
 
   # GET /brightsides
   # GET /brightsides.json
   def index
-    @brightsides = Brightside.order(created_at: :desc)
+    @brightsides = current_user.brightsides.order(created_at: :desc)
   end
 
   # GET /brightsides/1
@@ -25,6 +26,7 @@ class BrightsidesController < ApplicationController
   # POST /brightsides.json
   def create
     @brightside = Brightside.new(brightside_params)
+    @brightside.user = current_user  # associate the new brightside to the current_user
 
     respond_to do |format|
       if @brightside.save
