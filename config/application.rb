@@ -33,3 +33,13 @@ module BrightsideApp
     config.active_record.raise_in_transactional_callbacks = true
   end
 end
+
+module TodoApp
+  class Application < Rails::Application
+
+    config.generators do |g|
+      g.orm             :active_record
+      g.template_engine :erb
+    end
+  end
+end
