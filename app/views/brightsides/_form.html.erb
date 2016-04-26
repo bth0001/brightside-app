@@ -1,0 +1,25 @@
+<%= form_for(@brightside) do |f| %>
+  <% if @brightside.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@brightside.errors.count, "error") %> prohibited this brightside from being saved:</h2>
+
+      <ul>
+      <% @brightside.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :entry %><br>
+    <%= f.text_field :entry %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

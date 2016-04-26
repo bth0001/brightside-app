@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Here are your BrightSides</h1>
+
+<div class="table-responsive brightsides">
+
+
+<table>
+  <thead>
+    <tr>
+      <th>Show</th>
+      <th>Edit</th>
+      <th>Destroy</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @brightsides.each do |brightside| %>
+      <tr>
+        <td><%= brightside.title %></td>
+        <td><%= brightside.entry %></td>
+        <td><%= link_to 'Show', brightside %></td>
+        <td><%= link_to 'Edit', edit_brightside_path(brightside) %></td>
+        <td><%= link_to 'Destroy', brightside, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Brightside', new_brightside_path %>

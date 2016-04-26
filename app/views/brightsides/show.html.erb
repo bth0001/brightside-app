@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @brightside.title %>
+</p>
+
+<p>
+  <strong>Entry:</strong>
+  <%= @brightside.entry %>
+</p>
+
+  <dt>Created:</dt>
+  <dd><%= @brightside.created_at %></dd>
+
+<%= link_to 'Edit', edit_brightside_path(@brightside) %> |
+<%= link_to 'Back', brightsides_path %>
