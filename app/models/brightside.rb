@@ -1,6 +1,6 @@
 class Brightside < ActiveRecord::Base
   validates :title, presence: true
-
+  belongs_to :user
   before_save :default_values
 
   private
