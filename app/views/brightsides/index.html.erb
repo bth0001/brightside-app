@@ -1,6 +1,12 @@
-<p id="notice"><%= notice %></p>
+<div class="page-header">
+  <%= link_to new_brightside_path, class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-plus"></span>
+    New Brightside
+  <% end %>
+  <h1>Here are your BrightSides</h1>
 
-<h1>Here are your BrightSides</h1>
+</div>
+
 
 <div class="table-responsive brightsides">
 
@@ -29,5 +35,3 @@
 </table>
 
 <br>
-
-<%= link_to 'New Brightside', new_brightside_path %>

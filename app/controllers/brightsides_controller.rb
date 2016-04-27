@@ -3,6 +3,17 @@ class BrightsidesController < ApplicationController
   before_action :set_brightside, only: [:show, :edit, :update, :destroy]
   before_action :verify_correct_user, only: [:show, :edit, :update, :destroy]
 
+  #def toggle_completed
+  #  @brightside.completed = !@brightside.completed
+  #  respond_to do |format|
+  #    if @brightside.save
+  #      format.html { redirect_to brightsides_path }
+  #      format.json { render :show, status: :ok, location: @brightside }
+  #    else
+  #    # show some error message
+  #    end
+  #  end
+  #end
   # GET /brightsides
   # GET /brightsides.json
   def index
@@ -27,11 +38,11 @@ class BrightsidesController < ApplicationController
   # POST /brightsides.json
   def create
     @brightside = Brightside.new(brightside_params)
-    @brightside.user = current_user  # associate the new brightside to the current_user
+    @brightside.user = current_user
 
     respond_to do |format|
       if @brightside.save
-        format.html { redirect_to @brightside_path, notice: 'Brightside was successfully created.' }
+        format.html { redirect_to brightsides_path, notice: 'BrightSide was successfully created.' }
         format.json { render :show, status: :created, location: @brightside }
       else
         format.html { render :new }
@@ -45,7 +56,7 @@ class BrightsidesController < ApplicationController
   def update
     respond_to do |format|
       if @brightside.update(brightside_params)
-        format.html { redirect_to @brightsides_path, notice: 'Brightside was successfully updated.' }
+        format.html { redirect_to brightsides_path, notice: 'Brightside was successfully updated.' }
         format.json { render :show, status: :ok, location: @brightside }
       else
         format.html { render :edit }
@@ -70,13 +81,15 @@ class BrightsidesController < ApplicationController
       @brightside = Brightside.find(params[:id])
     end
 
+    # Never trust parameters from the scary internet, only allow the white list through.
+    def brightside_params
+      params.require(:brightside).permit(:title, :entry)
+    end
+
     def verify_correct_user
       @brightside = current_user.brightsides.find_by(id: params[:id])
       redirect_to root_url, notice: 'You do not have access to this page!' if @brightside.nil?
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def brightside_params
-      params.require(:brightside).permit(:title, :entry)
-    end
+
 end
