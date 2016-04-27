@@ -1,6 +1,7 @@
 class BrightsidesController < ApplicationController
-  before_action :set_brightside, only: [:show, :edit, :update, :destroy]
   before_action :signed_in_user
+  before_action :set_brightside, only: [:show, :edit, :update, :destroy]
+  before_action :verify_correct_user, only: [:show, :edit, :update, :destroy]
 
   # GET /brightsides
   # GET /brightsides.json
@@ -58,7 +59,7 @@ class BrightsidesController < ApplicationController
   def destroy
     @brightside.destroy
     respond_to do |format|
-      format.html { redirect_to brightsides_path, notice: 'Brightside was successfully destroyed.' }
+      format.html { redirect_to brightsides_path, notice: 'Brightside was successfully deleted.' }
       format.json { head :no_content }
     end
   end
@@ -67,6 +68,11 @@ class BrightsidesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_brightside
       @brightside = Brightside.find(params[:id])
+    end
+
+    def verify_correct_user
+      @brightside = current_user.brightsides.find_by(id: params[:id])
+      redirect_to root_url, notice: 'You do not have access to this page!' if @brightside.nil?
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

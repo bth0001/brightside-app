@@ -5,9 +5,12 @@
 @import "bootstrap-sprockets.scss";
 @import "bootstrap.scss";
 @import "superhero.scss";
+@import url(https://fonts.googleapis.com/css?family=Coming+Soon);
 
 body {
   padding-top: $navbar-height + 10px;
+  background-image: image-url('background.jpg');
+  background-size: cover;
 }
 
 .page-header {

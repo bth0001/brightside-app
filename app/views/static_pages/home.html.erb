@@ -1,7 +1,7 @@
 <% provide(:title, 'Home') %>
 <div class="text-center jumbotron">
-  <h1>Welcome to the BrightSide App</h1>
-  <h3>This is the home page for the BrightSide App with AuthN and AuthZ.</h3>
+  <%= image_tag("Logo.png", :alt => "logo") %>
+  <h3>A simple journaling app to keep track of the BrightSide of any day or situation.</h3>
   <br/>
   <%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>
   <%= link_to "Sign in",      signin_path, class: "btn btn-large btn-primary" %>
