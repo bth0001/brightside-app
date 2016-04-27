@@ -35,7 +35,7 @@ gem 'bootstrap-generators', '~> 3.3.4'
 
 gem 'rails_12factor', group: :production
 
-gem 'acts-as-taggable-on'
+gem 'shareable'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
