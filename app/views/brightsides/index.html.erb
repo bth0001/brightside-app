@@ -1,15 +1,18 @@
 <div class="page-header">
+
+  <h1>Not matter how gloomy, every day has a BrightSide!</h1>
   <%= link_to new_brightside_path, class: 'btn btn-primary' do %>
     <span class="glyphicon glyphicon-plus"></span>
     New Brightside
   <% end %>
-  <h1>Your BrightSides</h1>
+  <h3>Record yours here:</h3>
+
 
 </div>
 
 
 <div class="table-responsive brightsides">
-
+<h4>My BrightSides</h4>
 
 <table class="table table-hover">
   <thead>
@@ -30,7 +33,7 @@
         <td><%= link_to 'View', brightside %></td>
         <td><%= link_to 'Edit', edit_brightside_path(brightside) %></td>
         <td><%= link_to 'Delete', brightside, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <td><%= link_to 'Add Shine', shines_path %></td>
+        <td><%= link_to 'View Shines', shines_path(brightside) %></td>
 
       </tr>
     <% end %>

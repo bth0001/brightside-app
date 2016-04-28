@@ -1,0 +1,8 @@
+<% provide(:title, 'Home') %>
+<div class="text-center jumbotron">
+  <%= image_tag("Logo.png", :alt => "logo") %>
+  <h3>A simple journaling app to keep track of the BrightSide of any day or situation.</h3>
+  <br/>
+  <%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>
+  <%= link_to "Sign in",      signin_path, class: "btn btn-large btn-primary" %>
+</div>

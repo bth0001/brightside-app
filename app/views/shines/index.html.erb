@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Shines</h1>
-
+<h1>Because today has a BrightSide,<br>
+I'll spread the brightness by:</h1>
 <table>
   <thead>
     <tr>
@@ -17,8 +17,7 @@
         <td><%= shine.title %></td>
         <td><%= shine.completed %></td>
         <td><%= link_to 'View', shine %></td>
-        <td><%= link_to 'Edit', edit_shine_path(shine) %></td>
-        <td><%= link_to 'Delete', shine, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
       </tr>
     <% end %>
   </tbody>
