@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160427181523) do
+ActiveRecord::Schema.define(version: 20160428150327) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,18 +26,19 @@ ActiveRecord::Schema.define(version: 20160427181523) do
 
   add_index "brightsides", ["user_id"], name: "index_brightsides_on_user_id", using: :btree
 
-  create_table "taggings", force: :cascade do |t|
-    t.integer  "tag_id"
-    t.integer  "taggable_id"
-    t.string   "taggable_type"
-    t.integer  "tagger_id"
-    t.string   "tagger_type"
-    t.string   "context",       limit: 128
-    t.datetime "created_at"
+  create_table "pass_on_the_brightnesses", force: :cascade do |t|
+    t.string   "title"
+    t.boolean  "completed"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
-  add_index "taggings", ["tag_id", "taggable_id", "taggable_type", "context", "tagger_id", "tagger_type"], name: "taggings_idx", unique: true, using: :btree
-  add_index "taggings", ["taggable_id", "taggable_type", "context"], name: "index_taggings_on_taggable_id_and_taggable_type_and_context", using: :btree
+  create_table "shines", force: :cascade do |t|
+    t.string   "title",      null: false
+    t.boolean  "completed",  null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "tags", force: :cascade do |t|
     t.string  "name"

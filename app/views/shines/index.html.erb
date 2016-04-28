@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Shines</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Completed</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @shines.each do |shine| %>
+      <tr>
+        <td><%= shine.title %></td>
+        <td><%= shine.completed %></td>
+        <td><%= link_to 'View', shine %></td>
+        <td><%= link_to 'Edit', edit_shine_path(shine) %></td>
+        <td><%= link_to 'Delete', shine, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Shine', new_shine_path %>

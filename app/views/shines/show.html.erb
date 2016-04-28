@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @shine.title %>
+</p>
+
+<p>
+  <strong>Completed:</strong>
+  <%= @shine.completed %>
+</p>
+
+<%= link_to 'Edit', edit_shine_path(@shine) %> |
+<%= link_to 'Back', shines_path %>
