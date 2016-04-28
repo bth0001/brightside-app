@@ -3,7 +3,7 @@
     <span class="glyphicon glyphicon-plus"></span>
     New Brightside
   <% end %>
-  <h1>Here are your BrightSides</h1>
+  <h1>Your BrightSides</h1>
 
 </div>
 
@@ -14,9 +14,10 @@
 <table class="table table-hover">
   <thead>
     <tr>
-      <th>Show</th>
-      <th>Edit</th>
-      <th>Destroy</th>
+      <th>Title</th>
+      <th>Content</th>
+      <th>Options</th>
+
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -26,9 +27,9 @@
       <tr>
         <td><%= brightside.title %></td>
         <td><%= brightside.entry %></td>
-        <td><%= link_to 'Show', brightside %></td>
+        <td><%= link_to 'View', brightside %></td>
         <td><%= link_to 'Edit', edit_brightside_path(brightside) %></td>
-        <td><%= link_to 'Destroy', brightside, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Delete', brightside, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
