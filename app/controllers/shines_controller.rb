@@ -28,7 +28,7 @@ class ShinesController < ApplicationController
 
     respond_to do |format|
       if @shine.save
-        format.html { redirect_to @shine, notice: 'Shine was successfully created.' }
+        format.html { redirect_to @shine, notice: 'Action was successfully created.' }
         format.json { render :show, status: :created, location: @shine }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class ShinesController < ApplicationController
   def update
     respond_to do |format|
       if @shine.update(shine_params)
-        format.html { redirect_to @shine, notice: 'Shine was successfully updated.' }
+        format.html { redirect_to @shine, notice: 'Action was successfully updated.' }
         format.json { render :show, status: :ok, location: @shine }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class ShinesController < ApplicationController
   def destroy
     @shine.destroy
     respond_to do |format|
-      format.html { redirect_to shines_url, notice: 'Shine was successfully destroyed.' }
+      format.html { redirect_to shines_url, notice: 'Action was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

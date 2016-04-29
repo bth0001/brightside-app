@@ -2,7 +2,7 @@
 General Assembly WDI April 29, 2016 - Project 2
 
 - Project: https://brightside-app.herokuapp.com/
-- Trello Board: https://trello.com/b/ewnKaU0M/beat-sales
+- Trello Board: https://trello.com/b/hhRVjVAu/brightside-app
 - GitHub: https://github.com/bth0001/brightside-app
 
 ## Overview
@@ -24,21 +24,12 @@ The goal of this project was to apply our knowledge of the MVC pattern using Rub
 ## Technologies Used
 - Languages => HTML5, CSS3, JavaScript, Ruby
 - Libraries/Frameworks => Rails, jQuery, Bootstrap (Bootswatch for theme)
-- Rails Gems => 'bcrypt', '~> 3.1.7', 'pg', '~> 0.15', 
+- Rails Gems => 'bcrypt', '~> 3.1.7', 'pg', '~> 0.15'
+- Tools => Sublime Text, Terminal, 
 
 ## Future Developments / Improvements
-
-#### Phase 1
-- DRY up code
-- Make the site responsive
+- Dry up code
+- Make the site responsive/mobile-friendly
 - Add functionality for users share their BrightSides with other Users
-- Add functionality for users to follow producers
-- Add functionality for users to receive alerts when followed producers upload a new tracks
-- Upload a random production related image if user does not choose to upload image
-- Pull metadata from uploaded tracks for fields such as track duration
-
-#### Phase 2
-- Add ecommerce functionality
-- Add visual representation of wave forms
-- Add Drag and Drop functionality to add beats
-- Add dashboard of stats for producers
+- Add functionality for users to share their BrightSides on social media
+- Add functionality for users to upload images to their BrightSides
