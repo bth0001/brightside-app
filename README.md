@@ -9,9 +9,9 @@ General Assembly WDI April 29, 2016 - Project 2
 The goal of this project was to apply our knowledge of the MVC pattern using Ruby on Rails to create a CRUD application with Authentication and Authorization. After my grandfather passed away, I was looking to develop an app that would allow users to focus on the positives of any situation, no matter how gloomy.  This app functions as a simple journaling app where you can also add a checklist of actions to each entry.
 
 ## Wireframes/Mockups
-![BrightSides](http://i.imgur.com/C2tzlpo.jpg)
+![Home Page](http://i.imgur.com/4dyaVw8.png)
+![BrightSides](http://i.imgur.com/c3cbmmp.png)
 ![Actions](http://i.imgur.com/oZYyn4K.jpg)
-![Home Page](http://i.imgur.com/OKPD8iP.jpg)
 ![Relationships](http://i.imgur.com/pKPAwHS.jpg)
 
 ## How to Use
