@@ -22,10 +22,8 @@ ActiveRecord::Schema.define(version: 20160429040350) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "user_id",    null: false
-    t.integer  "shine_id"
   end
 
-  add_index "brightsides", ["shine_id"], name: "index_brightsides_on_shine_id", using: :btree
   add_index "brightsides", ["user_id"], name: "index_brightsides_on_user_id", using: :btree
 
   create_table "shines", force: :cascade do |t|
@@ -50,7 +48,6 @@ ActiveRecord::Schema.define(version: 20160429040350) do
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
 
-  add_foreign_key "brightsides", "shines"
   add_foreign_key "brightsides", "users"
   add_foreign_key "shines", "brightsides"
 end

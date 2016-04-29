@@ -6,9 +6,5 @@ class CreateBrightsides < ActiveRecord::Migration
 
       t.timestamps null: false
     end
-  def
-    change_table(:brightsides) do |t|
-    t.remove :shine_id
-  end
   end
 end

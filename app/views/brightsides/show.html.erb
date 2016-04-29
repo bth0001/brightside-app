@@ -1,17 +1,19 @@
 <p id="notice"><%= notice %></p>
 
+<h3>BrightSide</h3>
 <p>
-  <strong>Title:</strong>
+  <strong>Date:</strong>
   <%= @brightside.title %>
 </p>
 
 <p>
-  <strong>Entry:</strong>
+  <strong>Content:</strong>
   <%= @brightside.entry %>
 </p>
 
   <dt>Created:</dt>
   <dd><%= @brightside.created_at %></dd><br>
 
-<%= link_to 'Edit', edit_brightside_path(@brightside) %> |
+<%= link_to 'Edit BrightSide', edit_brightside_path(@brightside) %> |
+<%= link_to 'New Action', new_shine_path %> |
 <%= link_to 'Back', brightsides_path %>
