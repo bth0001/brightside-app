@@ -1,14 +1,14 @@
 # BrightSide App
-General Assembly WDI April 28, 2016 - Project 2
+General Assembly WDI April 29, 2016 - Project 2
 
-- Project: https://frozen-sea-57041.herokuapp.com/
+- Project: https://brightside-app.herokuapp.com/
 - Trello Board: https://trello.com/b/ewnKaU0M/beat-sales
 - GitHub: https://github.com/bth0001/brightside-app
 
 ## Overview
 The goal of this project was to apply our knowledge of the MVC pattern using Ruby on Rails to create a CRUD application with Authentication and Authorization. After my grandfather passed away, I was looking to develop an app that would allow users to focus on the positives of any situation, no matter how gloomy.  This app functions as a simple journaling app where you can also add a checklist of actions to each entry.
 
-## Wireframes / Mockups
+## Wireframes/Mockups
 ![BrightSides](http://i.imgur.com/C2tzlpo.jpg)
 ![Actions](http://i.imgur.com/oZYyn4K.jpg)
 ![Home Page](http://i.imgur.com/OKPD8iP.jpg)
@@ -24,7 +24,7 @@ The goal of this project was to apply our knowledge of the MVC pattern using Rub
 ## Technologies Used
 - Languages => HTML5, CSS3, JavaScript, Ruby
 - Libraries/Frameworks => Rails, jQuery, Bootstrap (Bootswatch for theme)
-- Rails Gems => 'bcrypt', '~> 3.1.7'
+- Rails Gems => 'bcrypt', '~> 3.1.7', 'pg', '~> 0.15', 
 
 ## Future Developments / Improvements
 
