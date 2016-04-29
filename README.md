@@ -26,7 +26,7 @@ The goal of this project was to apply our knowledge of the MVC pattern using Rub
 - Languages => HTML5, CSS3, JavaScript, Ruby
 - Libraries/Frameworks => Rails, jQuery, Bootstrap (Bootswatch for theme)
 - Rails Gems => 'bcrypt', '~> 3.1.7' (password security), 'pg', '~> 0.15'(postgresql)
-- Tools => Sublime Text, Terminal, Adobe Photoshop
+- Tools => Sublime Text, Terminal, Balsamiq, Adobe Photoshop
 
 ## Future Developments / Improvements
 - Dry up code
