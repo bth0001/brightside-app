@@ -5,7 +5,7 @@ I'll spread the brightness by:</h1>
 <table>
   <thead>
     <tr>
-      <th>Title</th>
+      <th>Action</th>
       <th>Completed</th>
       <th colspan="3"></th>
     </tr>
@@ -13,8 +13,9 @@ I'll spread the brightness by:</h1>
 
   <tbody>
     <% @shines.each do |shine| %>
+
       <tr>
-        <td><%= shine.title %></td>
+        <td><%= shine.title %></td><br>
         <td><%= shine.completed %></td>
         <td><%= link_to 'View', shine %></td>
 
@@ -25,4 +26,5 @@ I'll spread the brightness by:</h1>
 
 <br>
 
-<%= link_to 'New Shine', new_shine_path %>
+<%= link_to 'New Action', new_shine_path %> |
+<%= link_to 'Back', brightsides_path %>

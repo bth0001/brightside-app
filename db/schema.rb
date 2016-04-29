@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160428150327) do
+ActiveRecord::Schema.define(version: 20160429040350) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,30 +22,21 @@ ActiveRecord::Schema.define(version: 20160428150327) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "user_id",    null: false
+    t.integer  "shine_id"
   end
 
+  add_index "brightsides", ["shine_id"], name: "index_brightsides_on_shine_id", using: :btree
   add_index "brightsides", ["user_id"], name: "index_brightsides_on_user_id", using: :btree
 
-  create_table "pass_on_the_brightnesses", force: :cascade do |t|
-    t.string   "title"
-    t.boolean  "completed"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "shines", force: :cascade do |t|
-    t.string   "title",      null: false
-    t.boolean  "completed",  null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "title",         null: false
+    t.boolean  "completed",     null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.integer  "brightside_id"
   end
 
-  create_table "tags", force: :cascade do |t|
-    t.string  "name"
-    t.integer "taggings_count", default: 0
-  end
-
-  add_index "tags", ["name"], name: "index_tags_on_name", unique: true, using: :btree
+  add_index "shines", ["brightside_id"], name: "index_shines_on_brightside_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "first_name",      null: false
@@ -59,5 +50,7 @@ ActiveRecord::Schema.define(version: 20160428150327) do
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
 
+  add_foreign_key "brightsides", "shines"
   add_foreign_key "brightsides", "users"
+  add_foreign_key "shines", "brightsides"
 end

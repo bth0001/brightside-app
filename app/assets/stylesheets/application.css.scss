@@ -23,6 +23,16 @@ body {
   }
 }
 
+th {
+  font-size: 20px;
+}
+td {
+  font-size: 16px;
+}
+td:nth-child(1) {
+    padding-right: 100px;
+}​
+
 input[type="radio"], input[type="checkbox"] {
   width: initial;
   height: initial;
