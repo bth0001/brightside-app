@@ -12,12 +12,13 @@ The goal of this project was to apply our knowledge of the MVC pattern using Rub
 ![BrightSides](http://i.imgur.com/C2tzlpo.jpg)
 ![Actions](http://i.imgur.com/oZYyn4K.jpg)
 ![Home Page](http://i.imgur.com/OKPD8iP.jpg)
+![Relationships](http://i.imgur.com/pKPAwHS.jpg)
 
 ## How to Use
 1. Sign up for an account
 2. Create a new BrightSide
 	- Manage BrightSides (Add, Edit, Delete)
-3. Create a new action called a "Shine"
+3. Create a new action
 	- Manage Actions (Add, Edit, Delete) 
 	
 
@@ -25,7 +26,7 @@ The goal of this project was to apply our knowledge of the MVC pattern using Rub
 - Languages => HTML5, CSS3, JavaScript, Ruby
 - Libraries/Frameworks => Rails, jQuery, Bootstrap (Bootswatch for theme)
 - Rails Gems => 'bcrypt', '~> 3.1.7', 'pg', '~> 0.15'
-- Tools => Sublime Text, Terminal, 
+- Tools => Sublime Text, Terminal, Adobe Photoshop
 
 ## Future Developments / Improvements
 - Dry up code
